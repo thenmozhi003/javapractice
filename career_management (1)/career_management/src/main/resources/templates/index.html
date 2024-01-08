@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Application Form</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: violet;
+  color: #333;
+  margin: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: purple;
+  margin-bottom: 30px;
+}
+
+form {
+  background-color: plum;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"]:focus,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid plum;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+button[type="submit"] {
+  background-color: purple;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Additional colorful styling */
+label {
+  color: #555;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+
+select:focus {
+  border-color: #337ab7;
+  box-shadow: 0 0 5px rgba(51, 122, 179, 0.5);
+}
+
+.error {
+  color: #ff0000;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+</style>
+</head>
+<body>
+    <h1>Career Application Form</h1>
+    <form name="index" th:action="@{/details}" method="post" >
+        <!-- <form action="/submit-application" method="post"> -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+    
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+    
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+    
+      <label for="position">Position Applying For:</label>
+      <select id="position" name="position" required>
+        <option value="">Select a position</option>
+        <option value="Software Engineer">Software Engineer</option>
+        <option value="Web Developer">Web Developer</option>
+        <option value="Data Analyst">Data Analyst</option>
+        <option value="Full Stack Developer">Full Stack Developer    </option>
+        </select><br><br>
+
+      <lable for="skill">Skills:</lable>
+      <input type="text" id ="skill" name="skill"><br><br>
+    
+      <label for="linkedin">LinkedIn Profile URL:</label>
+      <input type="url" id="linkedin" name="linkedin"><br><br>
+    
+      <label for="github">GitHub Profile URL:</label>
+      <input type="url" id="github" name="github"><br><br>
+
+
+    
+      <button type="submit">Submit</button>
+    
+    </form>
+
+    </body>
+
+</html>
